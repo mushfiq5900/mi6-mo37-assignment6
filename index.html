@@ -13,37 +13,43 @@
 
 <body>
     <main>
-        <div class="container">
+        <div class="container-fluid p-0">
             <!-- header and search section -->
-            <h1 class="text-center text-info bg-light p-5">Phone Finder<span class="text-warning fw-bold"> +</span></h1>
-            <div class="input-group w-50 mx-auto my-5">
-                <input type="text" class="form-control" placeholder="Enter Phone Name">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search Phone</button>
+            <h1 class="text-center text-info bg-light py-5">Phone Finder<span class="text-warning fw-bold"> +</span>
+            </h1>
+            <div class="container">
+                <div class="input-group w-100 mx-auto my-5 px-1">
+                    <input id="search-text" type="text" class="form-control" placeholder="Enter Phone Name">
+                    <button onclick="searchPhone()" class="btn btn-outline-secondary" type="button"
+                        id="button-addon2">Search Phone</button>
+                </div>
             </div>
         </div>
         <!-- phone details section -->
-        <!-- <div class="container my-5">
+        <div class="container my-5">
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div id="phone-details" class="mx-auto">
-                    <div class="col">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"> Phone Name:<span> template string</span></h5>
-                                <p class="card-text">Release Date:<span> template string</span> </p>
-                                <p class="card-text">Sensor Info:<span> template string</span> </p>
-                                <p class="card-text">Others Info:<span> template string</span> </p>
+                    <!-- <div class="col">
+                        <div class="card border-warning">
+                            <h2 class="card-title text-center pt-3">Details Info</h2>
+                            <img class="p-5" src="${phoneDetails.image}" class="card-img-top" alt="...">
+                            <div class="card-body bg-warning">
+                                <h5 class="card-title"> Phone Name:<span> ${phoneDetails.name}</span></h5>
+                                <p class="card-text">Release Date:<span> ${phoneDetails.releaseDate}</span> </p>
+                                <p class="card-text">Sensor Info:<span> ${phoneDetails.mainFeatures?.sensors}</span>
+                                </p>
+                                <p class="card-text">Others Info:<span> ${phoneDetails.others?.WLAN}</span> </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- phone view card section -->
         <div class="container">
             <div id="phone-view" class="row row-cols-1 row-cols-md-3 g-4">
-
-                <div class="col">
+                <!-- <h1 class="mx-auto text-danger">No Phone Found !!</h1> -->
+                <!-- <div class="col">
                     <div class="card">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
@@ -53,32 +59,7 @@
                                 Details</button>
                         </div>
                     </div>
-                </div>
-
-                <div class="col">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"> Phone Name:<span> template string</span></h5>
-                            <p class="card-text">Phone Brand:<span> template string</span> </p>
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">More
-                                Details</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title"> Phone Name:<span> template string</span></h5>
-                            <p class="card-text">Phone Brand:<span> template string</span> </p>
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2">More
-                                Details</button>
-                        </div>
-                    </div>
-                </div>
-
+                </div> -->
             </div>
         </div>
 
