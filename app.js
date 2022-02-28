@@ -13,6 +13,15 @@ const noPhoneNotification = () => {
     cardId.appendChild(notification)
 }
 
+//Release Date Validation
+function releaseDateValidation(releaseDate) {
+    if (releaseDate === "") {
+        const notifi = 'No Release Date Found'
+        return notifi
+    }
+    return releaseDate
+}
+
 //search phones
 function searchPhone() {
     clearResult('phone-details')
@@ -84,7 +93,7 @@ function showPhoneDetails(phoneDetails) {
                 <img class="p-5" src="${phoneDetails.image}" class="card-img-top" alt="...">
                 <div class="card-body bg-warning">
                     <h5 class="card-title"> Phone Name:<span> ${phoneDetails.name}</span></h5>
-                    <p class="card-text">Release Date:<span> ${phoneDetails.releaseDate}</span> </p>
+                    <p class="card-text">Release Date:<span> ${releaseDateValidation(phoneDetails.releaseDate)}</span> </p>
                     <p class="card-text">Sensor Info:<span> ${phoneDetails.mainFeatures?.sensors}</span> </p>
                     <p class="card-text">Others Info:<span> ${phoneDetails.others?.WLAN}</span> </p>
                 </div>
