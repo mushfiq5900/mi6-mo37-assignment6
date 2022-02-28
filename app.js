@@ -15,6 +15,7 @@ const noPhoneNotification = () => {
 
 //search phones
 function searchPhone() {
+    clearResult('phone-details')
     //Getting Search Text
     const searchField = document.getElementById('search-text')
     const searchText = searchField.value
