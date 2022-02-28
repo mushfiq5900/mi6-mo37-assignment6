@@ -63,3 +63,12 @@ function showResult(apiData) {
     }
 }
 
+//fetching phone details
+function fetchDetails(slug) {
+    const url = `https://openapi.programming-hero.com/api/phone/${slug}`
+    fetch(url)
+        .then(res => res.json())
+        .then(data => showPhoneDetails(data.data))
+    clearResult('phone-details')
+}
+
