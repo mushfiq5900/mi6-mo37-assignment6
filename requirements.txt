@@ -1,2 +1,21 @@
 Requirements:
-1. 
+1. Search bar banate hbe
+2. Name hobe search ba onno kichu
+3. Phone Finder Name hobe
+4. Search kore kichu pawa na gele "No phone found likhe dite hbe"
+5. Phn er info card a dekhate hbe(3 col er card). Photo, name, brand dekhate hobe
+6. Card a akta button thakbe. Detail/ Explore amn nam er. Ota te click korle aro detalis dekhabe.
+7. Details ta search r result er majhe dekhano jete pare
+8. Details khujte hbe "slug" die
+9. Details a phn er chobi nam r rlease date r main features dite hbe. release date na thakle no date found amn dite hbe
+10. Function sob arrow function use korte hbe.
+
+Bonus:
+1. Sensor Info dekhate hobe
+2. Others info dekhate hbe
+3. Search result 20 er beshi howa jabena
+
+Extra:
+1. Show all button
+2. Spinner add korte
+3. Case insensitive search
