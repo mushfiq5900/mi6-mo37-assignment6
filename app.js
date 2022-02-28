@@ -49,7 +49,7 @@ function showResult(apiData) {
                 <div class="card-body">
                     <h5 class="card-title"> Phone Name:<span> ${phones.phone_name}</span></h5>
                     <p class="card-text">Brand Name:<span> ${phones.brand}</span> </p>
-                    <button onclick="fetchDetails('${phones.slug}')" class="btn btn-outline-secondary" type="button" id="button-addon2">More
+                    <button onclick="fetchDetails('${phones.slug}')" class="btn btn-outline-dark" type="button" id="button-addon2">More
                         Details</button>
                 </div>
             </div>
@@ -72,3 +72,24 @@ function fetchDetails(slug) {
     clearResult('phone-details')
 }
 
+//Display phone details
+function showPhoneDetails(phoneDetails) {
+    const cardId = document.getElementById('phone-details')
+    const newDiv = document.createElement('div')
+    newDiv.classList.add('col')
+    newDiv.innerHTML = ` <div class="col">
+            <div class="card border-warning">
+            <h2 class="card-title text-center pt-3">Details Info</h2>
+                <img class="p-5" src="${phoneDetails.image}" class="card-img-top" alt="...">
+                <div class="card-body bg-warning">
+                    <h5 class="card-title"> Phone Name:<span> ${phoneDetails.name}</span></h5>
+                    <p class="card-text">Release Date:<span> ${phoneDetails.releaseDate}</span> </p>
+                    <p class="card-text">Sensor Info:<span> ${phoneDetails.mainFeatures?.sensors}</span> </p>
+                    <p class="card-text">Others Info:<span> ${phoneDetails.others?.WLAN}</span> </p>
+                </div>
+            </div>
+        </div>
+        `
+    cardId.appendChild(newDiv)
+    cardId.scrollIntoView()
+}
