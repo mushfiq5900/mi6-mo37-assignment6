@@ -23,7 +23,7 @@ const releaseDateValidation = (releaseDate) => {
 }
 
 //search phones
-function searchPhone() {
+const searchPhone = () => {
     clearResult('phone-details')
     //Getting Search Text
     const searchField = document.getElementById('search-text')
@@ -45,7 +45,7 @@ function searchPhone() {
 }
 
 //Show search phones result
-function showResult(apiData) {
+const showResult = (apiData) => {
     if (apiData != '') {
         const selectedPhones = apiData.slice(0, 20)
         for (phones of selectedPhones) {
@@ -74,7 +74,7 @@ function showResult(apiData) {
 }
 
 //fetching phone details
-function fetchDetails(slug) {
+const fetchDetails = (slug) => {
     const url = `https://openapi.programming-hero.com/api/phone/${slug}`
     fetch(url)
         .then(res => res.json())
@@ -83,7 +83,7 @@ function fetchDetails(slug) {
 }
 
 //Display phone details
-function showPhoneDetails(phoneDetails) {
+const showPhoneDetails = (phoneDetails) => {
     const cardId = document.getElementById('phone-details')
     const newDiv = document.createElement('div')
     newDiv.classList.add('col')
