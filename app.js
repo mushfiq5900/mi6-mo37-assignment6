@@ -13,10 +13,10 @@ const noPhoneNotification = () => {
     cardId.appendChild(notification)
 }
 
-//Release Date Validation
-function releaseDateValidation(releaseDate) {
+//Release Date/No data Validation
+const releaseDateValidation = (releaseDate) => {
     if (releaseDate === "") {
-        const notifi = 'No Release Date Found'
+        const notifi = 'No data Found'
         return notifi
     }
     return releaseDate
@@ -57,8 +57,8 @@ function showResult(apiData) {
             <div class="card">
                 <img class="p-5" src="${phones.image}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title"> Phone Name:<span> ${phones.phone_name}</span></h5>
-                    <p class="card-text">Brand Name:<span> ${phones.brand}</span> </p>
+                    <h5 class="card-title"><b>Phone Name:</b><span> ${phones.phone_name}</span></h5>
+                    <p class="card-text"><b>Brand Name:</b><span> ${phones.brand}</span> </p>
                     <button onclick="fetchDetails('${phones.slug}')" class="btn btn-outline-dark" type="button" id="button-addon2">More
                         Details</button>
                 </div>
@@ -92,10 +92,15 @@ function showPhoneDetails(phoneDetails) {
             <h2 class="card-title text-center pt-3">Details Info</h2>
                 <img class="p-5" src="${phoneDetails.image}" class="card-img-top" alt="...">
                 <div class="card-body bg-warning">
-                    <h5 class="card-title"> Phone Name:<span> ${phoneDetails.name}</span></h5>
-                    <p class="card-text">Release Date:<span> ${releaseDateValidation(phoneDetails.releaseDate)}</span> </p>
-                    <p class="card-text">Sensor Info:<span> ${phoneDetails.mainFeatures?.sensors}</span> </p>
-                    <p class="card-text">Others Info:<span> ${phoneDetails.others?.WLAN}</span> </p>
+                    <h5 class="card-title"><b>Phone Name:</b><span> ${phoneDetails.name}</span></h5>
+                    <p class="card-text"><b>Release Date:</b><span> ${releaseDateValidation(phoneDetails.releaseDate)}</span> </p>
+                    <h5 class="card-title"><b>Main Features:</b></h5>
+                    <p class="card-text"><b>Sensor Info:</b><span> ${phoneDetails.mainFeatures?.sensors}</span> </p>
+                    <p class="card-text"><b>Storage Info:</b><span> ${phoneDetails.mainFeatures?.storage}</span> </p>
+                    <p class="card-text"><b>Chipset Info:</b><span> ${phoneDetails.mainFeatures?.chipSet}</span> </p>
+                    <p class="card-text"><b>Memory Info:</b><span> ${phoneDetails.mainFeatures?.memory}</span> </p>
+                    <p class="card-text"><b>Sensor Info:</b><span> ${phoneDetails.mainFeatures?.sensors}</span> </p>
+                    <p class="card-text"><b>Others Info:</b><span> ${phoneDetails.others?.WLAN}</span> </p>
                 </div>
             </div>
         </div>
